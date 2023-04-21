@@ -11,12 +11,14 @@ const listaDeDestinos = new Array(
 
 //listaDeDestinos.push(`Belo Horizonte`)//inserindo item ao Array
 
-const idadeComprador = 15
-const estaAcompanhada = true
+const idadeComprador = 20
+const estaAcompanhada = false
+const temPassagemComprada = true
+
 console.log("Destinos possíveis: ")
 console.log(listaDeDestinos)
 
-if (idadeComprador >= 18) {
+/*if (idadeComprador >= 18) {
     console.log(`Comprador maior de idade`)
     listaDeDestinos.splice(1, 1) //removendo item
 } else if (estaAcompanhada) {
@@ -25,4 +27,17 @@ if (idadeComprador >= 18) {
 } else {
     console.log(`Não está acompanhada`)
 }
+console.log(listaDeDestinos)*/
+if (idadeComprador >= 18 || estaAcompanhada) {
+    console.log(`Boa Viagem`)
+    listaDeDestinos.splice(1, 1) //removendo item
+} else {
+    console.log(`Não está acompanhada`)
+}
 console.log(listaDeDestinos)
+console.log("Embarque \n\n")
+if (idadeComprador >= 18 && temPassagemComprada){
+    console.log("Boa viagem")
+}else{
+    console.log("Voce não pode embarcar")
+}
